@@ -41,7 +41,8 @@ header('Location:upload.php');
 }
 
 } else {
-
+$redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/google-drive-file-upload-oauth/callback.php';
+header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
 }
 
 
